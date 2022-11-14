@@ -1,0 +1,27 @@
+<p>Response data :</p>
+<ul>
+  <li *ngFor="let item of datas">{{item.name}}</li>
+</ul>
+<hr/>
+<p>Post New data :</p>
+<table>
+  <tr>
+    <td>ID</td>
+    <td>
+      <input class="form-control" type="text" [(ngModel)]="id" [ngModelOptions]="{standalone: true}" placeholder="Data ID">
+    </td>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>
+      <input class="form-control" type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" placeholder="Data Name">
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <button type="button" (click)="post()">Submit</button>
+    </td>
+  </tr>
+</table>
+
+<router-outlet></router-outlet>
